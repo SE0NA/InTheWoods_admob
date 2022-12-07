@@ -5,11 +5,8 @@
     <package>com.google.android.gms:play-services-ads:21.3.0</package>
   </packages>
   <files>
-    <file>Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar</file>
-    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.4.1.jar</file>
-    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-java8-2.4.1.jar</file>
-    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.1.0.aar</file>
-    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.1.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.core.core-1.6.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.4.1.aar</file>
     <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-service-2.1.0.aar</file>
     <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.0.0.aar</file>
