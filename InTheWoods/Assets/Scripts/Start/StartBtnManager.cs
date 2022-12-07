@@ -16,7 +16,7 @@ public class StartBtnManager : MonoBehaviour
     [SerializeField] GameObject prefab_fade;
     [SerializeField] List<Button> btnsOnMain;
     
-    Animator anim;
+    public Animator anim;
     AudioManager _audioManager;
 
     private void Start()
@@ -69,25 +69,21 @@ public class StartBtnManager : MonoBehaviour
             btnsOnMain[i].interactable = false;
 
         _audioManager.PlayAudioClip(1);
-        anim.Play("btn_fade_out");
-        Invoke("FadeOutForGame", 1f);
+        GameStart();
     }
-    void FadeOutForGame()
-    {
-        GameObject fade = GameObject.Instantiate(prefab_fade, transform.parent.transform);
-        fade.GetComponent<Animator>().Play("fade_out");
-        Invoke("GameStart", 2f);
-    }
-    public void GameStart()
+    void GameStart()
     {
         // 광고 시작
         GoogleMobileAdsScript ads = FindObjectOfType<GoogleMobileAdsScript>();
-        ads.GameStart();
+        ads.GameStart();    // 페이드 아웃 -> 광고 -> 게임 시작
+    }
+    public void FadeOutBeforeAds()
+    {
+        GameObject fade = GameObject.Instantiate(prefab_fade, transform.parent.transform);
+        fade.GetComponent<Animator>().Play("fade_out");
     }
     public void FailedGameStart()
     {
-        // 광고 실패, 버튼 다시 활성화
-        anim.Play("btn_fade_in");
         for (int i = 0; i < btnsOnMain.Count; i++)
             btnsOnMain[i].interactable = true;
     }

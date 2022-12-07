@@ -1797,6 +1797,7 @@ MonoBehaviour:
   sl_option_3: {fileID: 2130274772}
   prefab_fade: {fileID: 3105450738497900714, guid: c1d1815afd15def4cb19eecb0cc0bae3, type: 3}
   btnsOnMain: []
+  anim: {fileID: 0}
 --- !u!1 &936454197
 GameObject:
   m_ObjectHideFlags: 0

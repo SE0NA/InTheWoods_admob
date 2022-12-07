@@ -46,18 +46,26 @@ public class GoogleMobileAdsScript : MonoBehaviour
 
     public void GameStart()
     {
+        StartBtnManager btnmanager = FindObjectOfType<StartBtnManager>();
+
         if (this.intersitial.IsLoaded())
         {
-            this.intersitial.Show();
+            // »≠∏È ∆‰¿ÃµÂ æ∆øÙ -> ±§∞Ì
+            btnmanager.anim.Play("btn_fade_out");
+            btnmanager.FadeOutBeforeAds();  // ∆‰¿ÃµÂ æ∆øÙ 1.5√ 
+            Invoke("ShowAds", 2f);
         }
         else
         {
-            StartBtnManager btnmanager = FindObjectOfType<StartBtnManager>();
             btnmanager.FailedGameStart();
             toast_msg.SetActive(true);
-            toast_msg.GetComponent<Animator>().Play("toast_up");
-            Invoke("Toast_False", 0.5f);
+           toast_msg.GetComponent<Animator>().Play("toast_up");
+            Invoke("Toast_False", 1f);
         }
+    }
+    private void ShowAds()
+    {
+        this.intersitial.Show();
     }
     private void Toast_False()
     {
