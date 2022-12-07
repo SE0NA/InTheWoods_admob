@@ -4,40 +4,18 @@ using UnityEngine;
 
 public class Localize : MonoBehaviour
 {
-    static Localize instance;
-    static SystemLanguage sl;
-    static string lang;
+    static protected SystemLanguage sl;
+    static protected string lang;
 
-    List<Dictionary<string, object>> data;
+    static protected List<Dictionary<string, object>> data;
 
-    void Awake()
+    private void Start()
     {
-        if (instance == null)
-        {
-            // 시스템 언어 설정 알기
-            sl = Application.systemLanguage;
-            switch (sl)
-            {
-                case SystemLanguage.Korean:
-                    lang = "kr"; break;
-                case SystemLanguage.English:
-                    lang = "en"; break;
-                default:
-                    lang = "en"; break;
-            }
-            data = CSVReader.Read("script_" + lang);
-
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Debug.Log(data[3]["value"].ToString());
     }
 
-    // Update is called once per frame
-    void Update()
+    public string GetValueFromCSV(int index)    // index는 dictionary 기준
     {
-        
+        return data[index]["value"].ToString();
     }
 }
