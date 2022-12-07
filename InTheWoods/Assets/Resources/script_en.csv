@@ -1,0 +1,77 @@
+﻿key,value
+btn_next,next
+btn_ok,ok
+start_btn,start
+option_btn,option
+quit_btn,bye
+option_1,The teams can recoginize each other.
+option_2,Take hints at random.
+option_3,volume control
+toast_network,Check your Network!
+fade_woods,You are going\into the woods…
+fade_end,The game is over…
+fade_sleep,It was<br>a quite night…
+day_1,Day
+day_2,
+ui_go_home_info,<color=red>Exit</color> the current game and return to the <color=yellow>main</color>.
+ui_go_home_end,exit
+ui_go_home_continue,continue
+set1_info,Please set the number of participants.
+set2_info,Enter the participants' names in order.
+set2_inputfield_placeholder_1,no.
+set2_inputfield_placeholder_2,
+set3_info,"Before starting,<br>please set the number of animals."
+set3_info_wolf,<size=50>wolf</size><br><br>attack someone<br>at night.
+set3_info_cat,<size=50>cat</size><br><br>keep watch<br>someone<br>at night.
+set3_info_swan,<size=50>swan</size><br><br>protect someone<br>at night.
+set4_info,"Check your role.<br><size=35>After checking, press the button and hand it to the next.</size>"
+set4_touch_info,Touch to check
+set4_role_info_team,team
+set4_role_info_mission,mission
+set4_role_info_wolf,Attack someone at night.
+set4_role_info_cat,Keep watch someone at night.
+set4_role_info_swan,Protect someone at night.
+set4_role_info_others,Suspect everyone!
+step1_whodied_1,"Last night,"
+step1_whodied_2,was attacked by a wolf!
+step1_whodied_null,It was just a quiet night.
+step2_info,Check out the results<br>of your last night's action.
+step2_touch_info,Touch to check
+step2_wolf,Today's mission
+step2_cat_wolf_true,<br><br>is <color=red>wolf</color>!
+step2_cat_wolf_false,<br><br>is not wolf!
+step2_other_hint_1_1,"Last night,<br>the wolf <br>tried to attack"
+step2_other_hint_1_2,!
+step2_other_hint_2,Previous mission for wolf.
+step2_other_hint_3_1,"Last night,<br>the swan<br>protected"
+step2_other_hint_3_2,!
+step2_other_hint_4_1,There are only
+step2_other_hint_4_2,cat(s) left.
+step2_other,Suspect everyone!
+step3_info,Find the wolf through conversation!<br><br><color=yellow><size=40>wolves have mission word/act.</size></color>
+step4_info,"With everyone's opinion,<br>choose the wolf and <color=red>execute</color> it."
+step4_btn_pass,pass
+step4_btn_select_1,select
+step4_vote_info,<color=red>처형</color>할 대상을 선택하세요.
+step4_btn_back,back
+step4_btn_select_2,execute
+step5_before_1,"As a result of the vote,"
+step5_before_2,<br>was <color=red>executed</color>.
+step5_before_null,no one<br>was executed.
+step5_btn_result,and
+step5_result_1,"According to the investigation,"
+step5_result_2,was
+step5_wolf,a <color=red>wolf</color>!
+step5_notwolf,not a wolf!
+step6_info,Everyone is gets ready for tonight.
+step6_btn_yes,yes
+step6_other,Choose anyone!
+step6_wolf,Who shall we attack?
+step6_cat,Who shall we keep watch?
+step6_swan,Who shall we protect?
+end_result_win,Win!
+end_result_lose,<color=red>Wolves Win!</color>
+end_total,total:
+end_alive,survive:
+end_wolf,wolf:
+end_count_animal,
