@@ -25,6 +25,7 @@ public class Step2_Manager : MonoBehaviour
         _gm = FindObjectOfType<GameManager>();
         anim = GetComponent<Animator>();
 
+        btn.interactable = false;
         SetPanel();
     }
 
@@ -90,7 +91,7 @@ public class Step2_Manager : MonoBehaviour
             }
         }
 
-        Invoke("BtnActive", 5f);
+        Invoke("BtnActive", 3f);
     }
     void BtnActive() => btn.interactable = true;
 
