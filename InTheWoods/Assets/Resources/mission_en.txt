@@ -1,0 +1,16 @@
+<color=white>[word]</color>바나나
+<color=white>[word]</color>공원
+<color=white>[word]</color>나무
+<color=white>[word]</color>하늘
+<color=white>[word]</color>눈동자
+<color=white>[word]</color>다리
+<color=white>[word]</color>손가락
+<color=white>[word]</color>어깨
+<color=white>[word]</color>이빨
+<color=white>[word]</color>안경
+<color=white>[word]</color>팔
+<color=white>[word]</color>공격
+<color=white>[word]</color>규칙
+<color=white>[word]</color>물
+<color=white>[act]</color>어깨 돌리기
+<color=white>[act]</color>코 밑 훔치기

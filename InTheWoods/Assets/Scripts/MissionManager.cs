@@ -15,7 +15,19 @@ public class MissionManager : MonoBehaviour
         missions = new List<string>();
         history = new List<string>();
 
-        string path = "Assets/Resources/mission.txt";
+        SystemLanguage sl = Application.systemLanguage;
+        string file_lang = "";
+        switch (sl)
+        {
+            case SystemLanguage.Korean:
+                file_lang = "kr";   break;
+            case SystemLanguage.English:
+                file_lang = "en";   break;
+            default:
+                file_lang = "en";   break;
+        }
+
+        string path = "Assets/Resources/mission_" + file_lang + ".txt";
         string[] file = File.ReadAllLines(path);
         if (file.Length > 0)
             for (int i = 0; i < file.Length; i++)

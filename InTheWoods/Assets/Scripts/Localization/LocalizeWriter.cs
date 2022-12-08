@@ -9,8 +9,6 @@ public class LocalizeWriter : Localize
     {
         sl = Application.systemLanguage;
 
-        Debug.Log("writer " + (int)sl);
-
         switch (sl)
         {
             case SystemLanguage.Korean:

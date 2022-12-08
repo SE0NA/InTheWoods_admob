@@ -33,7 +33,7 @@ public class CSVReader
                 value = value.TrimStart(TRIM_CHARS).TrimEnd(TRIM_CHARS).Replace("\\", "");
 
                 value = value.Replace("<br>", "\n");
-                value = value.Replace("<c>", ",");
+                value = value.Replace("<null>", "");
 
                 object finalvalue = value;
                 int n;

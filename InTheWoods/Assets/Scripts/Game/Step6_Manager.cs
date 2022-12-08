@@ -50,13 +50,13 @@ public class Step6_Manager : MonoBehaviour
         txt_name.text = nowP.name;
 
         if (nowP.role == Role.wolf)
-            txt_info.text = "누구를 습격할까요?";
+            txt_info.text = _gm.GetLocalText(69);
         else if (nowP.role == Role.cat)
-            txt_info.text = "누구를 감시할까요?";
+            txt_info.text = _gm.GetLocalText(70);
         else if (nowP.role == Role.swan)
-            txt_info.text = "누구를 보호할까요?";
+            txt_info.text = _gm.GetLocalText(71);
         else
-            txt_info.text = "아무나 선택하세요!";
+            txt_info.text = _gm.GetLocalText(68);
 
         btn_1.interactable = false;
 

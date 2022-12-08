@@ -38,17 +38,17 @@ public class Step2_Manager : MonoBehaviour
         // 늑대
         if(p.role == Role.wolf)
         {
-            txt_after_info.text = "이번 미션 단어 입니다.\n\n"
+            txt_after_info.text = _gm.GetLocalText(40) + "\n\n"
                 + "<color=yellow>" + _gm.GetThisMission() + "</color>";
         }
         // 고양이
         else if(p.role == Role.cat)
         {
-            txt_after_info.text = "<color=yellow>" + _gm.GetCatSelect().name + "</color>은\n\n";
+            txt_after_info.text = "<color=yellow>" + _gm.GetCatSelect().name + "</color> ";
             if (_gm.GetCatSelect().role == Role.wolf)
-                txt_after_info.text += "<color=red>늑대</color>입니다!";
+                txt_after_info.text += _gm.GetLocalText(41);
             else
-                txt_after_info.text += "늑대가 아닙니다!";
+                txt_after_info.text += _gm.GetLocalText(42);
         }
         // 그 외(백조, 사슴, 토끼)
         else
@@ -61,33 +61,34 @@ public class Step2_Manager : MonoBehaviour
                 if (n < 10)
                 {
                     if (_gm.GetWhoDiedLastNight() == null) // 죽은 사람 없음
-                        txt_after_info.text = "어젯밤, 늑대가\n"
-                            + "<color=yellow>" + _gm.GetWolfSelect().name + "<color> 에게\n"
-                            + "습격을 시도했습니다!";
+                        txt_after_info.text = _gm.GetLocalText(43) + "\n"
+                            + "<color=yellow>" + _gm.GetWolfSelect().name + "<color> "
+                            + _gm.GetLocalText(44);
                     else
                     {
-                        txt_after_info.text = "어제의 늑대의 미션 단어입니다!\n\n"
+                        txt_after_info.text = _gm.GetLocalText(45) + "\n\n"
                             + "<color=yellow>" + _gm.GetLastMission() + "</color>";
                     }
                 }
                 // 3) 백조가 선택했던 사람(백조 제외)
                 else if (n < 25 && p.role != Role.swan)
                 {
-                    txt_after_info.text = "어젯밤, 백조는\n"
-                        + "<color=yellow>" + _gm.GetSwanSelect().name + "</color> 을(를)\n"
-                        + "보호하였습니다!";
+                    txt_after_info.text = _gm.GetLocalText(46) + "\n"
+                        + "<color=yellow>" + _gm.GetSwanSelect().name + "</color> "
+                        + _gm.GetLocalText(47);
                 }
                 // 4) 남은 고양이의 수
                 else
                 {
-                    txt_after_info.text = "남은 고양이는\n"
-                        + "<color=yellow>" + _gm.GetCatCount().ToString() + "</color>마리입니다.";
+                    txt_after_info.text = _gm.GetLocalText(48) + "\n"
+                        + "<color=yellow>" + _gm.GetCatCount().ToString() + "</color> "
+                        + _gm.GetLocalText(49);
                 }
             }
             // 힌트 없음
             else
             {
-                txt_after_info.text = "모두를 의심하세요!";
+                txt_after_info.text = _gm.GetLocalText(50);
             }
         }
 

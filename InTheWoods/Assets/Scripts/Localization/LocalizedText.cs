@@ -13,7 +13,13 @@ public class LocalizedText : Localize
     private void Start()
     {
         mytext = GetComponent<TextMeshProUGUI>();
-        mytext.text = GetValueFromCSV(index - 2);
+        switch (sl)
+        {
+            case SystemLanguage.English:
+                mytext.fontSize += 10;  break;
+            default:    break;
+        }
+        mytext.text = GetValueFromCSV(index);   // 0부터 시작하므로
     }
 
 }

@@ -57,10 +57,6 @@ public class SetManager : MonoBehaviour
     //Set 3:
     public void Active_Set3()
     {
-        string playernamelist = "";
-        for (int i = 0; i < _playerCount; i++)
-            playernamelist += "(" + _playerlist[i].id + ")" + _playerlist[i].name + ", ";
-
         thisSet = GameObject.Instantiate(SetPrefabsList[2], transform);
     }
     public void SetRoleCount(int w, int c, int s)

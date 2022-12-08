@@ -21,14 +21,13 @@ public class Step1_Manager : MonoBehaviour
         Player p = _gm.GetWhoDiedLastNight();
         if (p != null)
         {
-            txt_info.text = "어젯밤,\n"
-                + "<color=red>" + _gm.GetWhoDiedLastNight().name + "</color> (이)가\n"
-                + "늑대에게 습격받았습니다.";
+            txt_info.text = _gm.GetLocalText(35) + "\n"
+                + "<color=red>" + _gm.GetWhoDiedLastNight().name + "</color> " +
+                _gm.GetLocalText(36);
         }
         else
         {
-            txt_info.text = "어젯밤은\n"
-                + "평안했습니다.";
+            txt_info.text = _gm.GetLocalText(37);
         }
 
         Invoke("Active_Btn", 2f);

@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     UIManager _uimanager;
     MissionManager _mission;
     AudioManager _audiomanager;
+    Localize _localizemanager;
 
     void Start()
     {
@@ -36,6 +37,12 @@ public class GameManager : MonoBehaviour
         _uimanager = FindObjectOfType<UIManager>();
         _mission = FindObjectOfType<MissionManager>();
         _audiomanager = FindObjectOfType<AudioManager>();
+        _localizemanager = FindObjectOfType<Localize>();
+    }
+
+    public string GetLocalText(int index)
+    {
+        return _localizemanager.GetValueFromCSV(index);
     }
 
     public void SetGameManager(List<Player> pl, List<Player> wl, List<Player> cl, Player sw)
@@ -48,7 +55,6 @@ public class GameManager : MonoBehaviour
         _alivelist = _playerlist.ToList<Player>();
 
         FindObjectOfType<SetManager>().EndThis();
-        Debug.Log("Set 4 완료 > 게임 시작");
 
         // 페이드 아웃, 인
         _uimanager.UI_Fade_Out(true);

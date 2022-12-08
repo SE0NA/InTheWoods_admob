@@ -11,14 +11,14 @@ toast_network,네트워크를 확인하세요!
 fade_woods,숲으로<br><br>들어갑니다.
 fade_end,게임이<br><br>종료되었습니다.
 fade_sleep,조용한 밤이<br><br>지나갑니다.
-day_1,
+day_1,<null>
 day_2,일차
 ui_go_home_info,현재 게임을 <color=red>종료</color>하고<br><color=yellow>초기 화면</color>으로 이동합니다.
 ui_go_home_end,끝내기
 ui_go_home_continue,계속하기
 set1_info,참가 인원을 입력해주세요.
 set2_info,참가자의 이름을<br>순서대로 입력해주세요.
-set2_inputfield_placeholder_1,
+set2_inputfield_placeholder_1,<null>
 set2_inputfield_placeholder_2,번
 set3_info,"시작 전, 동물의 수를 설정해주세요."
 set3_info_wolf,<size=50>늑대</size><br><br>밤에 누군가를<br>습격합니다.
@@ -33,7 +33,7 @@ set4_role_info_cat,밤에 다른 동물을 감시합니다.
 set4_role_info_swan,밤에 다른 동물을 보호합니다.
 set4_role_info_others,모두를 의심하세요!
 step1_whodied_1,"어젯밤,"
-step1_whodied_2,늑대로부터 습격받았습니다.
+step1_whodied_2,이(가)<br>늑대로부터 습격받았습니다.
 step1_whodied_null,어젯밤은<br>평안했습니다.
 step2_info,어젯밤의 선택 결과를 확인하세요.
 step2_touch_info,터치동안 보여집니다.
@@ -75,3 +75,4 @@ end_total,총
 end_alive,생존
 end_wolf,늑대
 end_count_animal,마리
+game_end,끝

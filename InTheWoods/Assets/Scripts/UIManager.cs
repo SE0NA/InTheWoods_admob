@@ -21,10 +21,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject startfade;
 
     GameManager _gm;
+    Localize _localizemanager;
 
     void Start()
     {
         _gm = FindObjectOfType<GameManager>();
+        _localizemanager = FindObjectOfType<Localize>();
 
         startfade.GetComponent<Animator>().Play("startfade_in");
         Invoke("Destroy_StartFade", 1f);
@@ -46,7 +48,8 @@ public class UIManager : MonoBehaviour
         ob_day.SetActive(true);
         UI_SetDay(1);
     }
-    public void UI_SetDay(int n) => txt_day.text = n.ToString() + "일차";
+    public void UI_SetDay(int n) => txt_day.text = _localizemanager.GetValueFromCSV(14) + " "
+                                                  + n.ToString() + " " + _localizemanager.GetValueFromCSV(15);
 
     // 홈버튼 관련 UI
     public void OnClick_HomeBtn()

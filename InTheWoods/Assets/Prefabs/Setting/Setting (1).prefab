@@ -480,6 +480,7 @@ GameObject:
   - component: {fileID: 1858833332414161414}
   - component: {fileID: 1858833332414161412}
   - component: {fileID: 1858833332414161413}
+  - component: {fileID: 42632959858280276}
   m_Layer: 5
   m_Name: text
   m_TagString: Untagged
@@ -543,7 +544,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -603,6 +604,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &42632959858280276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858833332414161415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1a6e5e15d07c449bb5cebd5d823464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 19
 --- !u!1 &1858833332597654035
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +628,7 @@ GameObject:
   - component: {fileID: 1858833332597654034}
   - component: {fileID: 1858833332597654032}
   - component: {fileID: 1858833332597654033}
+  - component: {fileID: 5082984201040497353}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -677,7 +692,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -737,6 +752,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5082984201040497353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858833332597654035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b1a6e5e15d07c449bb5cebd5d823464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 2
 --- !u!1 &1858833332724200904
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +977,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 58367
+    rgba: 4278248447
   m_fontColor: {r: 1, g: 0.89133024, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

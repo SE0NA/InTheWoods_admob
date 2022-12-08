@@ -21,12 +21,14 @@ public class Set4_Manager : MonoBehaviour
     [SerializeField] Button btn;
 
     SetManager _setmanager;
+    Localize _localmanager;
     Animator anim;
 
     int turn = 0;
 
     void Start()
     {
+        _localmanager = FindObjectOfType<Localize>();
         _setmanager = FindObjectOfType<SetManager>();
         anim = GetComponent<Animator>();
 
@@ -44,29 +46,26 @@ public class Set4_Manager : MonoBehaviour
 
         if (p.role == Role.wolf)
         {
-            txt_info.text = "밤에 누군가를 습격합니다.\n\n"
+            txt_info.text = _localmanager.GetValueFromCSV(31) + "\n\n"
                 + TeamList(_setmanager.GetRoleList(Role.wolf), p) + "\n\n"
-                + "<color=yellow>미션</color>\n"
+                + "<color=yellow>" + _localmanager.GetValueFromCSV(30) + "</color>\n"
                 + _setmanager.GetFirstMission();
         }
 
         else if (p.role == Role.cat)
-            txt_info.text = "밤에 누군가를 감시합니다.\n\n"
+            txt_info.text = _localmanager.GetValueFromCSV(32) + "\n\n"
                 + TeamList(_setmanager.GetRoleList(Role.cat), p);
 
         else if (p.role == Role.swan)
-            txt_info.text = "밤에 누군가를 보호합니다.";
-
-        else if (p.role == Role.deer)
-            txt_info.text = "모두를 의심하세요!";
+            txt_info.text = _localmanager.GetValueFromCSV(33);
 
         else
-            txt_info.text = "모두를 의심하세요!";
+            txt_info.text = _localmanager.GetValueFromCSV(34);
 
     }
     string TeamList(List<Player> pl, Player me)
     {
-        string msg = "<color=red>동료</color>  ";
+        string msg = "<color=red>" + _localmanager.GetValueFromCSV(29) + "</color>  ";  // 동료
         int n;
 
         if (pl.Count == 1)  // 동료 없음

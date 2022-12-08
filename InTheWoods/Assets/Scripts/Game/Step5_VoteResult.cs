@@ -25,7 +25,7 @@ public class Step5_VoteResult : MonoBehaviour
 
         if (voted == null)
         {
-            txt_info.text = "<color=yellow>아무도</color>\n처형되지\n않았습니다.";
+            txt_info.text = _gm.GetLocalText(60);
             ob_btn_1.SetActive(false);
             ob_btn_2.SetActive(true);
             btn_2.interactable = false;
@@ -33,9 +33,8 @@ public class Step5_VoteResult : MonoBehaviour
         }
         else
         {
-            txt_info.text = "투표 결과,\n<color=yellow>" + voted.name + "</color> 은(는)\n"
-            + "<color=red>처형</color>되었습니다.";
-
+            txt_info.text = _gm.GetLocalText(58) + "\n<color=yellow>" + voted.name + "</color> "
+                + _gm.GetLocalText(59);
             btn_1.interactable = false;
             ob_btn_2.SetActive(false);
         }
@@ -52,13 +51,13 @@ public class Step5_VoteResult : MonoBehaviour
         ob_btn_2.SetActive(true);
         btn_2.interactable = false;
 
-        txt_info.text = "조사 결과,\n" +
-                "처형된 <color=yellow>" + voted.name + "</color> 은(는)\n";
+        txt_info.text = _gm.GetLocalText(62) + " <color=yellow>" + voted.name + "</color> " 
+            + _gm.GetLocalText(63) + "\n";
 
         if (voted.role == Role.wolf)
-            txt_info.text += "<color=red>늑대</color>였습니다!";
+            txt_info.text += _gm.GetLocalText(64);
         else
-            txt_info.text += "늑대가 아닙니다!";
+            txt_info.text += _gm.GetLocalText(65);
 
         Invoke("Active_Btn_2", 1f);
     }

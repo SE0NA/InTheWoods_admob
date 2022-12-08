@@ -24,9 +24,9 @@ public class GameEnd : MonoBehaviour
         btn.interactable = false;
 
         if (_gm.GetResult())
-            txt_end.text = "°ÔÀÓ ½Â¸®!";
+            txt_end.text = _gm.GetLocalText(72);
         else
-            txt_end.text = "<color=red>´Á´ë ½Â¸®!</color>";
+            txt_end.text = _gm.GetLocalText(73);
 
         txt_wolf.text = "";
         txt_cat.text = "";
@@ -42,12 +42,12 @@ public class GameEnd : MonoBehaviour
                 txt_swan.text = p.name;
         }
 
-        txt_mission.text = "<¹Ì¼Ç>\n" + _gm.GetMissionHistory();
+        txt_mission.text = "<"+ _gm.GetLocalText(30)+">\n" + _gm.GetMissionHistory();
 
-        txt_end_info.text = _gm.GetDay() + "ÀÏÂ÷\n\n"
-            + "ÃÑ " + _gm.GetWholePlayerCount().ToString() + "¸¶¸®\n"
-            + "»ýÁ¸ " + _gm.GetPlayerCount().ToString() + "¸¶¸®\n"
-            + "´Á´ë " + _gm.GetWolfListCount().ToString() + "¸¶¸®";
+        txt_end_info.text = _gm.GetLocalText(14) + " " + _gm.GetDay() + " " + _gm.GetLocalText(15) + "\n\n"
+            + _gm.GetLocalText(74) + " " + _gm.GetWholePlayerCount().ToString() + _gm.GetLocalText(77) + "\n"
+            + _gm.GetLocalText(75) + " " + _gm.GetPlayerCount().ToString() + _gm.GetLocalText(77) + "\n"
+            + _gm.GetLocalText(76) + " " + _gm.GetWolfListCount().ToString() + _gm.GetLocalText(77) + "\n";
 
         Invoke("Active_Btn", 1f);
     }
