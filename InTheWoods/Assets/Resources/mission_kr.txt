@@ -12,5 +12,5 @@
 <color=white>[언급]</color>공격
 <color=white>[언급]</color>규칙
 <color=white>[언급]</color>물
-<color=white>[행위]</color>어깨 돌리기
-<color=white>[행위]</color>코 밑 훔치기
+<color=white>[행위]</color>자리에서 일어나기
+<color=white>[행위]</color>한 턴동안 팔짱끼기
