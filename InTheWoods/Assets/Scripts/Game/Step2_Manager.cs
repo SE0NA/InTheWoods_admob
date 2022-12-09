@@ -62,7 +62,7 @@ public class Step2_Manager : MonoBehaviour
                 {
                     if (_gm.GetWhoDiedLastNight() == null) // 죽은 사람 없음
                         txt_after_info.text = _gm.GetLocalText(43) + "\n"
-                            + "<color=yellow>" + _gm.GetWolfSelect().name + "<color> "
+                            + "<color=yellow>" + _gm.GetWolfSelect().name + "</color> "
                             + _gm.GetLocalText(44);
                     else
                     {
@@ -70,12 +70,19 @@ public class Step2_Manager : MonoBehaviour
                             + "<color=yellow>" + _gm.GetLastMission() + "</color>";
                     }
                 }
-                // 3) 백조가 선택했던 사람(백조 제외)
-                else if (n < 25 && p.role != Role.swan)
+                // 3) 백조가 선택했던 사람(백조 제외), 스테이지에 백조가 있어야함.
+                else if (n < 35 && p.role != Role.swan && _gm._whoswan != null)
                 {
-                    txt_after_info.text = _gm.GetLocalText(46) + "\n"
-                        + "<color=yellow>" + _gm.GetSwanSelect().name + "</color> "
-                        + _gm.GetLocalText(47);
+                    if (_gm.IsSwanAlive())  // 백조가 살아있는 경우
+                    {
+                        txt_after_info.text = _gm.GetLocalText(46) + "\n"
+                            + "<color=yellow>" + _gm.GetSwanSelect().name + "</color> "
+                            + _gm.GetLocalText(47);
+                    }
+                    else
+                    {
+                        txt_after_info.text = _gm.GetLocalText(80);
+                    }
                 }
                 // 4) 남은 고양이의 수
                 else

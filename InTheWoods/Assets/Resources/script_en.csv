@@ -3,7 +3,7 @@ btn_next,next
 btn_ok,ok
 start_btn,start
 option_btn,option
-quit_btn,bye
+quit_btn,quit
 option_1,The teams can recoginize each other.
 option_2,Take hints at random.
 option_3,volume control
@@ -77,3 +77,4 @@ end_wolf,wolf:
 end_count_animal,<null>
 game_end,end
 title,In the Woods
+no_swan,"Sadly, <br>There are no swan."

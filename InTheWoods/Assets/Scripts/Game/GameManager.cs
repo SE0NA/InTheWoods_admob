@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     List<Player> _playerlist;
     List<Player> _wolflist;
     List<Player> _catlist;
-    Player _whoswan;
+    public Player _whoswan = null;
     List<Player> _alivelist;
 
     // 게임 진행 정보
@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
     public int GetCatCount() => _catlist.Count;
     public Player GetWolfSelect() => _wolfSelect;
     public Player GetSwanSelect() => _whoswan.selected;
+    public bool IsSwanAlive() => _whoswan.isAlive;
     public Player GetPlayerOn(int index) => _alivelist[index];
     public string GetLastMission() => _lastMission;
     public string GetThisMission() => _thisMission;
@@ -212,7 +213,7 @@ public class GameManager : MonoBehaviour
         }
 
         // 백조가 늑대로부터 보호하였는지
-        if (_whoswan.isAlive && _whoswan.selected.id == _whoDied.id)
+        if (_whoswan!=null && _whoswan.isAlive && _whoswan.selected.id == _whoDied.id)
             _whoDied = null;
         else
         {

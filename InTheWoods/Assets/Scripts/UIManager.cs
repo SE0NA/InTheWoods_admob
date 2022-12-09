@@ -91,7 +91,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            fade.GetComponent<Animator>().Play("fade_out");
+            fade.GetComponent<Animator>().Play("fade_out_end");
         }
     }
 
