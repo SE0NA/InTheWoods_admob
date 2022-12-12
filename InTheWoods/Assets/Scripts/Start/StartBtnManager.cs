@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class StartBtnManager : MonoBehaviour
 {
     // Start 씬의 버튼 동작
-
     [SerializeField] GameObject ob_btns;
     [SerializeField] GameObject pn_option;
     [SerializeField] Toggle tg_option_1;
@@ -87,7 +86,6 @@ public class StartBtnManager : MonoBehaviour
         for (int i = 0; i < btnsOnMain.Count; i++)
             btnsOnMain[i].interactable = true;
     }
-
 
     public void OnClick_Option()
     {

@@ -7,7 +7,7 @@ quit_btn,나가기
 option_1,같은 역할은 서로를 알 수 있습니다.
 option_2,랜덤으로 힌트를 제공합니다.
 option_3,음량 조절
-toast_network,네트워크를 확인하세요!
+toast_network,네트워크 연결 중…
 fade_woods,숲으로<br><br>들어갑니다.
 fade_end,게임이<br><br>종료되었습니다.
 fade_sleep,조용한 밤이<br><br>지나갑니다.

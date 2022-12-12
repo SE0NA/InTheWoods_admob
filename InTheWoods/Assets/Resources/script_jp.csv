@@ -7,7 +7,7 @@ quit_btn,quit
 option_1,同じチームはお互いを認識できます。
 option_2,ランダムでヒントを提供します。
 option_3,音量
-toast_network,ネットワークエラー！
+toast_network,ネットワーク接続中…
 fade_woods,森に<br><br>入ります。
 fade_end,ゲームが<br><br>終わりました。
 fade_sleep,静かな夜が<br><br>過ぎます。

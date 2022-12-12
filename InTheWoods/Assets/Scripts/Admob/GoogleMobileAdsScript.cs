@@ -1,54 +1,89 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds.Api;
 using System;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class GoogleMobileAdsScript : MonoBehaviour
 {
-    private InterstitialAd intersitial;
+    private RewardedAd rewardedAd;
 
     [SerializeField] GameObject toast_msg;
 
-    public void Start()
+    private StartBtnManager btnmanager;
+
+    private string adUnitId;
+    public bool adLoad = true;
+
+    public void Awake()
     {
-        string adUnitId;
+        // Initialize the Google Mobile Ads SDK.
+        MobileAds.Initialize(initStatus => { });
+        btnmanager = FindObjectOfType<StartBtnManager>();
+
 #if UNITY_ANDROID
-        adUnitId = "ca-app-pub-3940256099942544/1033173712";
+        adUnitId = "ca-app-pub-3940256099942544/5224354917";
 #elif UNITY_IPHONE
-        adUnitId = "ca-app-pub-3940256099942544/4411468910";
+        adUnitId = "ca-app-pub-3940256099942544/1712485313";
 #else
         adUnitId = "unexpected_platform";
 #endif
+        // Initialize an RewardedAd.
+        this.rewardedAd = new RewardedAd(adUnitId);
 
-        // Initialize the Google Mobile Ads SDK.
-        // MobileAds.Initialize(initStatus => { });
-
-        // Initialize an InterstitialAd.
-        this.intersitial = new InterstitialAd(adUnitId);
-
+        // Called when an ad request has successfully loaded.
+        this.rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
+        // Called when the user should be rewarded for interacting with the ad.
+        this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        // Called when an ad request failed to load.
+        this.rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
         // Called when the ad is closed.
-        this.intersitial.OnAdClosed += HandleOnAdClosed;
+        this.rewardedAd.OnAdClosed += HandleRewardedAdClosed;
 
         // Create an empty ad request.
         AdRequest request = new AdRequest.Builder().Build();
-        // Load the interstitial with the request.
-        this.intersitial.LoadAd(request);
+        // Load the rewarded ad with the request.
+        this.rewardedAd.LoadAd(request);
     }
 
-  
-    public void HandleOnAdClosed(object sender, EventArgs args)
+    public void  HandleRewardedAdLoaded(object sender, EventArgs args)
+    {
+        Debug.Log("±¤°í ·Îµå ¼º°ø");
+        adLoad = true;
+    }
+    public void HandleUserEarnedReward(object sender, EventArgs args)
     {
         SceneManager.LoadScene("Game");
+    }
+    public void HandleRewardedAdClosed(object sender, EventArgs args)
+    {
+        btnmanager.anim.Play("btn_fade_in");
+        this.CreateAndLoadRewardedAd();
+    }
+    public void HandleRewardedAdFailedToLoad(object sender, EventArgs args)
+    {
+        adLoad = false;
+        btnmanager.FailedGameStart();
+        ToastUp();
+    }
+
+    public RewardedAd CreateAndLoadRewardedAd()
+    {
+        RewardedAd rewardedAd = new RewardedAd(adUnitId);
+
+        rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
+        rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
+        rewardedAd.OnAdClosed += HandleRewardedAdClosed;
+
+        AdRequest request = new AdRequest.Builder().Build();
+        rewardedAd.LoadAd(request);
+
+        return rewardedAd;
     }
 
     public void GameStart()
     {
-        StartBtnManager btnmanager = FindObjectOfType<StartBtnManager>();
-
-        if (this.intersitial.IsLoaded())
+        if (this.rewardedAd.IsLoaded())
         {
             // È­¸é ÆäÀÌµå ¾Æ¿ô -> ±¤°í
             btnmanager.anim.Play("btn_fade_out");
@@ -57,17 +92,21 @@ public class GoogleMobileAdsScript : MonoBehaviour
         }
         else
         {
-            btnmanager.FailedGameStart();
-            toast_msg.SetActive(true);
-           toast_msg.GetComponent<Animator>().Play("toast_up");
-            Invoke("Toast_False", 1f);
+            ToastUp();
         }
     }
     private void ShowAds()
     {
-        this.intersitial.Show();
+        this.rewardedAd.Show();
     }
-    private void Toast_False()
+    
+    private void ToastUp()
+    {
+        toast_msg.SetActive(true);
+        toast_msg.GetComponent<Animator>().Play("toast_up");
+        Invoke("ToastDown", 1f);
+    }
+    private void ToastDown()
     {
         toast_msg.SetActive(false);
     }

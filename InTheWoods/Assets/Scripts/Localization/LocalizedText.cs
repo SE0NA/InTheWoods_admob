@@ -19,7 +19,7 @@ public class LocalizedText : Localize
                 mytext.fontSize += 10;  break;
             default:    break;
         }
+
         mytext.text = GetValueFromCSV(index);   // 0부터 시작하므로
     }
-
 }

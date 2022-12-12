@@ -33,6 +33,7 @@ public class Step3_Timer : MonoBehaviour
             if(min <=0 && sec <= 0)
             {
                 SetTimer(0, 0);
+                Handheld.Vibrate();
                 EndThis();
             }
             else
