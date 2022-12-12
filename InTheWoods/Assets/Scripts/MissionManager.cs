@@ -28,8 +28,26 @@ public class MissionManager : MonoBehaviour
                 file_lang = "en";   break;
         }
 
-        string path = "Assets/Resources/mission_" + file_lang + ".txt";
-        string[] file = File.ReadAllLines(path);
+        TextAsset file = Resources.Load("mission_" + file_lang) as TextAsset;
+        StringReader reader = new StringReader(file.text);
+        //   string[] file = File.ReadAllLines(path);
+        if(file == null)
+        {
+            // 파일 존재X
+            missions.Add("<color=white>[단어]</color>바나나");
+            missions.Add("<color=white>[행위]</color>다리 떨기");
+            missions.Add("<color=white>[단어]</color>주사위");
+
+            Debug.Log("mission 파일 존재X");
+        }
+
+        string str = reader.ReadLine();
+        while (str != null)
+        {
+            missions.Add(str);
+            str = reader.ReadLine();
+        }
+        /*
         if (file.Length > 0)
             for (int i = 0; i < file.Length; i++)
                 missions.Add(file[i]);
@@ -39,6 +57,7 @@ public class MissionManager : MonoBehaviour
             missions.Add("<color=white>[행위]</color>다리 떨기");
             missions.Add("<color=white>[단어]</color>주사위");
         }
+        */
         count = missions.Count;
     }
     
