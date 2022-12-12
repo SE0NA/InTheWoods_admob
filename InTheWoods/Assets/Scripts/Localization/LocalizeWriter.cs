@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class LocalizeWriter : Localize
 {
-    // Start is called before the first frame update
     void Awake()
     {
         sl = Application.systemLanguage;
-
+        // sl = SystemLanguage.Japanese;
         switch (sl)
         {
             case SystemLanguage.Korean:
-                lang = "kr"; break;
+                lang = "kr";    break;
             case SystemLanguage.English:
-                lang = "en"; break;
+                lang = "en";    break;
+            case SystemLanguage.Japanese:
+                lang = "jp";    break;
             default:
-                lang = "en"; break;
+                lang = "en";    break;
         }
         data = CSVReader.Read("script_" + lang);
         Destroy(GetComponent<LocalizeWriter>());

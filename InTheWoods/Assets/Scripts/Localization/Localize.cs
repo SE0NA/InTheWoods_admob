@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Localize : MonoBehaviour
 {
-    static protected SystemLanguage sl;
-    static protected string lang;
+    protected static SystemLanguage sl;
+    protected static string lang;
 
-    static public List<Dictionary<string, object>> data;
+    public static List<Dictionary<string, object>> data;
 
 
     public string GetValueFromCSV(int index)    // index´Â dictionary ±âÁØ

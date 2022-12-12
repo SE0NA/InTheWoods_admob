@@ -16,6 +16,7 @@ public class MissionManager : MonoBehaviour
         history = new List<string>();
 
         SystemLanguage sl = Application.systemLanguage;
+        //SystemLanguage sl = SystemLanguage.Japanese;
         string file_lang = "";
         switch (sl)
         {
@@ -23,6 +24,8 @@ public class MissionManager : MonoBehaviour
                 file_lang = "kr";   break;
             case SystemLanguage.English:
                 file_lang = "en";   break;
+            case SystemLanguage.Japanese:
+                file_lang = "jp";   break;
             default:
                 file_lang = "en";   break;
         }

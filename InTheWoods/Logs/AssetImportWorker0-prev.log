@@ -15,11 +15,11 @@ D:/game/InTheWoods_admob/InTheWoods
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61917
+65253
 Successfully changed project path to: D:/game/InTheWoods_admob/InTheWoods
 D:/game/InTheWoods_admob/InTheWoods
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 121.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 183.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.42f1 (7ade1201f527)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.42f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.42f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.42f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.42f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56356
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.42f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002057 seconds.
+Registered in 0.002863 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 84.23 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 92.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.913 seconds
+- Completed reload, in  1.344 seconds
 Domain Reload Profiling:
-	ReloadAssembly (914ms)
-		BeginReloadAssembly (77ms)
+	ReloadAssembly (1344ms)
+		BeginReloadAssembly (91ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (745ms)
-			LoadAssemblies (74ms)
+		EndReloadAssembly (1149ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (222ms)
+			SetupTypeCache (218ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (61ms)
-			SetupLoadedEditorAssemblies (285ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (690ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (84ms)
-				BeforeProcessingInitializeOnLoad (24ms)
-				ProcessInitializeOnLoadAttributes (123ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
-				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				RefreshPlugins (93ms)
+				BeforeProcessingInitializeOnLoad (23ms)
+				ProcessInitializeOnLoadAttributes (125ms)
+				ProcessInitializeOnLoadMethodAttributes (427ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (14ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.023075 seconds.
+Registered in 0.034463 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 76.89 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 77.75 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.004 seconds
+- Completed reload, in  2.387 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2014ms)
-		BeginReloadAssembly (202ms)
+	ReloadAssembly (2390ms)
+		BeginReloadAssembly (244ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (25ms)
-		EndReloadAssembly (1705ms)
-			LoadAssemblies (190ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (2030ms)
+			LoadAssemblies (229ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (494ms)
+			SetupTypeCache (599ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (83ms)
-			SetupLoadedEditorAssemblies (532ms)
+			RebuildScriptCaches (91ms)
+			SetupLoadedEditorAssemblies (492ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (77ms)
-				BeforeProcessingInitializeOnLoad (122ms)
-				ProcessInitializeOnLoadAttributes (251ms)
-				ProcessInitializeOnLoadMethodAttributes (67ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				RefreshPlugins (78ms)
+				BeforeProcessingInitializeOnLoad (142ms)
+				ProcessInitializeOnLoadAttributes (226ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (12ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (2ms)
+			AwakeInstancesAfterBackupRestoration (3ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.71 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2418 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 104.8 MB.
-System memory in use after: 104.9 MB.
+System memory in use after: 105.0 MB.
 
 Unloading 104 unused Assets to reduce memory usage. Loaded Objects now: 2792.
-Total: 3.730000 ms (FindLiveObjects: 0.245200 ms CreateObjectMapping: 0.146500 ms MarkObjects: 3.158200 ms  DeleteObjects: 0.178800 ms)
+Total: 5.894800 ms (FindLiveObjects: 0.342800 ms CreateObjectMapping: 0.201200 ms MarkObjects: 5.205200 ms  DeleteObjects: 0.143800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -132,127 +132,49 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/DOSMyungjo SDF 1.asset
-  artifactKey: Guid(19a27e609bcb33d4fa89896d582b15d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DOSMyungjo SDF 1.asset using Guid(19a27e609bcb33d4fa89896d582b15d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6d05153e10466b204dd9ee1b606a9b8') in 0.822402 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000387 seconds.
-  path: Assets/TextMesh Pro
-  artifactKey: Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro using Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16b4cbde9565bf190136f1148817e1ea') in 0.030064 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000348 seconds.
-  path: Assets/DOSMyungjo SDF.asset
-  artifactKey: Guid(337f6e90de4681840893e2fe7eacda60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DOSMyungjo SDF.asset using Guid(337f6e90de4681840893e2fe7eacda60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f03a566dabe4e588f2d64bffbc75874b') in 0.614925 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.874604 seconds.
-  path: Assets/DOSMyungjo SDF _title.asset
-  artifactKey: Guid(19a27e609bcb33d4fa89896d582b15d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DOSMyungjo SDF _title.asset using Guid(19a27e609bcb33d4fa89896d582b15d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '651c85506ccc8793be6fad0c111f15b1') in 0.650358 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 60.984641 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF.shader
-  artifactKey: Guid(68e6db2ebdc24f95958faec2be5558d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF.shader using Guid(68e6db2ebdc24f95958faec2be5558d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7edfe8f9bc0ba589b6634411def64c1') in 0.033877 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 44.230554 seconds.
-  path: Assets/DOSMyungjo.ttf
-  artifactKey: Guid(a865593919497bc40b55b7b2973fa255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DOSMyungjo.ttf using Guid(a865593919497bc40b55b7b2973fa255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa28f1a3dd466b9c6820f1449854c3eb') in 0.145638 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 131.081891 seconds.
-  path: Assets/Resources/script_kr.csv
-  artifactKey: Guid(07af5c7661b8c9443b96793bb5f3f6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/script_kr.csv using Guid(07af5c7661b8c9443b96793bb5f3f6c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84738c953c80a6f976fb2b162c4c3349') in 0.073962 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.297888 seconds.
-  path: Assets/Resources/script_en.csv
-  artifactKey: Guid(e6e188130b3207b4b967837f1443dd81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/script_en.csv using Guid(e6e188130b3207b4b967837f1443dd81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb100a06ad3fe425e42e2fa986eeb57b') in 0.027062 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.676921 seconds.
-  path: Assets/Resources/script_en.csv
-  artifactKey: Guid(e6e188130b3207b4b967837f1443dd81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/script_en.csv using Guid(e6e188130b3207b4b967837f1443dd81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d5b61bb57519e45a32afa1bf60b05e3') in 0.040294 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 239.062145 seconds.
-  path: Assets/Resources/mission_en.txt
-  artifactKey: Guid(3c6d060645e1fba48935eb2c8dd8613e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/mission_en.txt using Guid(3c6d060645e1fba48935eb2c8dd8613e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c0fb24db02272eeea7fb6860685dec1') in 0.075231 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 33.679546 seconds.
   path: Assets/Resources/mission_kr.txt
   artifactKey: Guid(085d6c5648481b040a342fc817cf52d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/mission_kr.txt using Guid(085d6c5648481b040a342fc817cf52d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '864a3e486ca258a67fc852b8b192ec77') in 0.242701 seconds 
+Start importing Assets/Resources/mission_kr.txt using Guid(085d6c5648481b040a342fc817cf52d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95788aaa90ca4c9a440a52fb79753327') in 0.105989 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 57.151229 seconds.
-  path: Assets/Plugins/Android
-  artifactKey: Guid(f3598be8cafa9434fba4f2cc049b93ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android using Guid(f3598be8cafa9434fba4f2cc049b93ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd34e7953fd1e5be0297a808c730cecd5') in 0.028559 seconds 
+  Time since last request: 605.596854 seconds.
+  path: Assets/Resources/mission_en.txt
+  artifactKey: Guid(3c6d060645e1fba48935eb2c8dd8613e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/mission_en.txt using Guid(3c6d060645e1fba48935eb2c8dd8613e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '587e143948719976c861717494c0bb6a') in 0.033813 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.791430 seconds.
-  path: Assets/Plugins/Android/res
-  artifactKey: Guid(ea58cb62d19340e489b18931e187f412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android/res using Guid(ea58cb62d19340e489b18931e187f412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b2ddfa8b815f48ce23a3d56fd5bc1d') in 0.036072 seconds 
+  Time since last request: 4.721759 seconds.
+  path: Assets/Resources/mission_en 1.txt
+  artifactKey: Guid(c9385cb4fe476ed479fc3c265d71da60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/mission_en 1.txt using Guid(c9385cb4fe476ed479fc3c265d71da60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adf6bfe3788ced56d394f093aa55486e') in 0.028328 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.154650 seconds.
-  path: Assets/Plugins/Android/res/values
-  artifactKey: Guid(25b60117a06890a4dac8e13260863cc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android/res/values using Guid(25b60117a06890a4dac8e13260863cc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '561257028a85a515287f85ce3fd3801d') in 0.024669 seconds 
+  Time since last request: 6.881771 seconds.
+  path: Assets/Resources/mission_jp.txt
+  artifactKey: Guid(c9385cb4fe476ed479fc3c265d71da60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/mission_jp.txt using Guid(c9385cb4fe476ed479fc3c265d71da60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9c6e0f8f0eecd5b618e16d341f478ee') in 0.028466 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.225198 seconds.
-  path: Assets/Plugins/Android/res/values-ko
-  artifactKey: Guid(7322b75336829064c94d06c4b1d75c51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android/res/values-ko using Guid(7322b75336829064c94d06c4b1d75c51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a0da4f5aad76099c88b289535f9fce6') in 0.031343 seconds 
+  Time since last request: 640.767308 seconds.
+  path: Assets/Resources/mission_jp.txt
+  artifactKey: Guid(c9385cb4fe476ed479fc3c265d71da60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/mission_jp.txt using Guid(c9385cb4fe476ed479fc3c265d71da60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '914d108b2a86b08ed3afacfad978682c') in 0.018512 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.306925 seconds.
-  path: Assets/Plugins/Android/res/values-en
-  artifactKey: Guid(b6fee31422900b349a1ca1da46140f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android/res/values-en using Guid(b6fee31422900b349a1ca1da46140f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54ee20a59427140da60627e42c6a6157') in 0.024522 seconds 
+  Time since last request: 14.734906 seconds.
+  path: Assets/Resources/mission_jp.txt
+  artifactKey: Guid(c9385cb4fe476ed479fc3c265d71da60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/mission_jp.txt using Guid(c9385cb4fe476ed479fc3c265d71da60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d9963b560229c9995ba554e2e7b9626') in 0.024792 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 110.046647 seconds.
-  path: Assets/Plugins/Android/res/values-en/strings.xml
-  artifactKey: Guid(c9d45fa9b0b710a4a85285f83138d8a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android/res/values-en/strings.xml using Guid(c9d45fa9b0b710a4a85285f83138d8a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52bdfb6842e478b9237f3381c7e96ef7') in 0.033498 seconds 
+  Time since last request: 4.375807 seconds.
+  path: Assets/Resources/mission_kr.txt
+  artifactKey: Guid(085d6c5648481b040a342fc817cf52d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/mission_kr.txt using Guid(085d6c5648481b040a342fc817cf52d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4171a72c5f4701ed1e044adb40d0f6e6') in 0.022641 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 40.836482 seconds.
-  path: Assets/Plugins/Android/res/values-en/strings 1.xml
-  artifactKey: Guid(f5865030df6ae6243b2c5e0a5640d338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android/res/values-en/strings 1.xml using Guid(f5865030df6ae6243b2c5e0a5640d338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ac2f541c1055841838c87ed6a8512d0') in 0.025705 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.999460 seconds.
-  path: Assets/Plugins/Android/res/values-ko/strings.xml
-  artifactKey: Guid(f5865030df6ae6243b2c5e0a5640d338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android/res/values-ko/strings.xml using Guid(f5865030df6ae6243b2c5e0a5640d338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec18cca105d2316df995b9353a78b08a') in 0.026515 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 101.896170 seconds.
-  path: Assets/Plugins/Android/res/values-en/strings 1.xml
-  artifactKey: Guid(a2a9854a53cbf4846866cab3dfb10801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android/res/values-en/strings 1.xml using Guid(a2a9854a53cbf4846866cab3dfb10801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc663146261d5cde9839b473e16900d') in 0.044552 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.310232 seconds.
-  path: Assets/Plugins/Android/res/values/strings.xml
-  artifactKey: Guid(a2a9854a53cbf4846866cab3dfb10801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Android/res/values/strings.xml using Guid(a2a9854a53cbf4846866cab3dfb10801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012bca4f558b18e30238af4a3673fab4') in 0.017036 seconds 
+  Time since last request: 1.867938 seconds.
+  path: Assets/Resources/script_jp.csv
+  artifactKey: Guid(87cd82f8c300db74db75a00016fff5ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/script_jp.csv using Guid(87cd82f8c300db74db75a00016fff5ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df20d62f8eb1da297fb57739b1eddfa4') in 0.028225 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
