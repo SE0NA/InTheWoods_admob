@@ -60,6 +60,7 @@ public class UIManager : MonoBehaviour
     }
     public void OnClick_PNHome_EndGame()
     {
+        FindObjectOfType<AdsBannerScript>().BannerAdsEnd();
         UI_Fade_Out(false);
         Invoke("EndThis", 1f);
     }

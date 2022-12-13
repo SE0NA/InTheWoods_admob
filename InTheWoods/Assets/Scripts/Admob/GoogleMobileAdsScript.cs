@@ -62,6 +62,10 @@ public class GoogleMobileAdsScript : MonoBehaviour
                 // Load the rewarded ad with the request.
                 this.rewardedAd.LoadAd(request);
 
+                while (!this.rewardedAd.IsLoaded())
+                {
+                    Debug.Log("loading ads...");
+                }
                 adsLoaded = true;
             }
         }
@@ -130,7 +134,7 @@ public class GoogleMobileAdsScript : MonoBehaviour
                 btnmanager.SetActive_StartBtn(false);
                 btnmanager.anim.Play("btn_fade_out");
                 btnmanager.FadeOutBeforeAds();  // 페이드 아웃 1.5초
-                Invoke("ShowAds", 2f);
+                Invoke("ShowAds", 1f);
             }
         }
     }
