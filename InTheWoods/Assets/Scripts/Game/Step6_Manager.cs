@@ -74,16 +74,30 @@ public class Step6_Manager : MonoBehaviour
 
     public void SelectOne(Player p)
     {
-        // 본인 아님(백조 예외) & 서로 역할 공개-같은 팀 선택 제외
-        if ((p.id == nowP.id && nowP.role != Role.swan)
-            || ((PlayerPrefs.GetInt("KnowEachOther") == 1) && (nowP.role == Role.wolf || nowP.role == Role.cat) && p.role == nowP.role))
-        {
-            btn_2.interactable = false;
-        }
-        else
+        // 백조: 전부 선택 가능
+        if(nowP.role == Role.swan)
         {
             _gm.PlayerSelect(turn, p);
             btn_2.interactable = true;
+        }
+        // 그외가 다른사람 선택
+        else if(nowP.id != p.id)
+        {
+            // 힌트 제공 && 특수 역할 && 같은 팀 선택 -> 선택 불가
+            if (PlayerPrefs.GetInt("KnowEachOther") == 1 && (nowP.role == Role.cat || nowP.role == Role.wolf) && nowP.role == p.role)
+            {
+                btn_2.interactable = false;
+            }
+            else
+            {
+                _gm.PlayerSelect(turn, p);
+                btn_2.interactable = true;
+            }
+        }
+        else
+        {
+            // 그 외의 경우: 본인 선택 -> 선택 불가
+            btn_2.interactable = false;
         }
 
         for (int i = 0; i < list_tab.Count; i++)

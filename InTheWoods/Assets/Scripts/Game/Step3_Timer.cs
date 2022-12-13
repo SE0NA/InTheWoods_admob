@@ -7,8 +7,8 @@ public class Step3_Timer : MonoBehaviour
     Step3_Manager manager;
     [SerializeField] TextMeshProUGUI txt_timer;
 
-    int min = 3;
-    int sec = 0;
+    int min = 0;
+    int sec = 3;
     [SerializeField] float time = 0;
 
     bool timer = false;

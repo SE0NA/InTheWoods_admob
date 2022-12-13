@@ -8,7 +8,7 @@ public class LocalizedText : Localize
     [Tooltip("csv파일의 순번")]
     [SerializeField] public int index;
 
-    private TextMeshProUGUI mytext;
+    protected TextMeshProUGUI mytext;
 
     private void Start()
     {
