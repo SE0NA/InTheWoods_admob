@@ -9,6 +9,7 @@ public class Set3_Manager : MonoBehaviour
     [SerializeField] Slider cat_slider;
     [SerializeField] Slider swan_slider;
     [SerializeField] Button btn;
+    [SerializeField] Button load_btn;
 
     Animator anim;
     SetManager _setmanager;
@@ -20,6 +21,11 @@ public class Set3_Manager : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         _setmanager = FindObjectOfType<SetManager>();
+
+        if (_setmanager.previousData == null)
+            load_btn.interactable = false;
+        else
+            load_btn.interactable = true;
 
         playerCount = _setmanager.Get_PlayerCount();
 
@@ -37,6 +43,7 @@ public class Set3_Manager : MonoBehaviour
         cat_slider.interactable = false;
         swan_slider.interactable = false;
         btn.interactable = false;
+        load_btn.interactable = false;
 
         _setmanager.SetRoleCount((int)wolf_slider.value, (int)cat_slider.value, (int)swan_slider.value);
         anim.Play("set3_fade_out");
@@ -49,4 +56,14 @@ public class Set3_Manager : MonoBehaviour
         Destroy(gameObject);
     }
 
+
+    public void LoadBtn()
+    {
+        wolf_slider.value = (_setmanager.previousData.count_wolf <= wolf_slider.maxValue) ?
+            _setmanager.previousData.count_wolf : wolf_slider.maxValue;
+        cat_slider.value = (_setmanager.previousData.count_cat <= cat_slider.maxValue) ?
+            _setmanager.previousData.count_cat : cat_slider.maxValue;
+        swan_slider.value = (_setmanager.previousData.count_swan <= swan_slider.maxValue) ?
+            _setmanager.previousData.count_swan : swan_slider.maxValue;
+    }
 }

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class Set2_Manager : MonoBehaviour
     [SerializeField] GameObject ob_namefield;
     [SerializeField] GameObject ob_Content;
     [SerializeField] Button btn;
+    [SerializeField] Button load_btn;
 
     List<Set2_NameField> list_namefield;
     Animator anim;
@@ -18,6 +20,11 @@ public class Set2_Manager : MonoBehaviour
     {
         _setmanager = FindObjectOfType<SetManager>();
         anim = GetComponent<Animator>();
+
+        if (_setmanager.previousData == null)
+            load_btn.interactable = false;
+        else
+            load_btn.interactable = true;
 
         list_namefield = new List<Set2_NameField>();
 
@@ -33,7 +40,7 @@ public class Set2_Manager : MonoBehaviour
     public void OnClick_BtnOK()
     {
         btn.interactable = false;
-
+        load_btn.interactable = false;
         List<Player> playerlist = new List<Player>();
         Player thisP;
         
@@ -52,5 +59,17 @@ public class Set2_Manager : MonoBehaviour
     {
         _setmanager.Active_Set3();
         Destroy(gameObject);
+    }
+
+    public void LoadBtn()
+    {
+        // 이전 데이터와 set1에서 입력된 인원에 따라 생성된 리스트 중 작은 만큼 적용
+        int min = (_setmanager.previousData.player_count < list_namefield.Count)
+            ? _setmanager.previousData.player_count : list_namefield.Count;
+
+        for(int i = 0; i < min; i++)
+        {
+            list_namefield[i].if_name.text = _setmanager.previousData.player_names[i];
+        }
     }
 }

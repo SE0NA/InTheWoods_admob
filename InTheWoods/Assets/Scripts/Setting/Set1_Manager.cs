@@ -9,6 +9,7 @@ public class Set1_Manager : MonoBehaviour
     [SerializeField] TextMeshProUGUI ui_text;
     [SerializeField] Slider ui_slider;
     [SerializeField] Button ui_btn;
+    [SerializeField] Button loadDataBtn;
 
     Animator anim;
     SetManager _setmanager;
@@ -17,6 +18,11 @@ public class Set1_Manager : MonoBehaviour
     {
         _setmanager = FindObjectOfType<SetManager>();
         anim = GetComponent<Animator>();
+
+        if (_setmanager.previousData == null)
+            loadDataBtn.interactable = false;
+        else
+            loadDataBtn.interactable = true;
     }
 
     public void SetText()
@@ -26,6 +32,7 @@ public class Set1_Manager : MonoBehaviour
 
     public void OnClick_BtnOK()
     {
+        loadDataBtn.interactable = false;
         ui_slider.interactable = false;
         ui_btn.interactable = false;
         _setmanager.Set_PlayerCount((int)ui_slider.value);
@@ -38,5 +45,10 @@ public class Set1_Manager : MonoBehaviour
     {
         _setmanager.Active_Set2();
         Destroy(gameObject);
+    }
+
+    public void LoadBtn()
+    {
+        ui_slider.value = _setmanager.previousData.player_count;
     }
 }

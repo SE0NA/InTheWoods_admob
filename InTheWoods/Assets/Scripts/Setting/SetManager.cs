@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using UnityEngine;
 
 public class SetManager : MonoBehaviour
@@ -7,6 +9,8 @@ public class SetManager : MonoBehaviour
     // 게임 설정 프리펩
     [SerializeField] List<GameObject> SetPrefabsList;
     GameObject thisSet;
+
+    public PlayerData previousData;
 
     // 설정 값
     int _playerCount = 0;
@@ -31,7 +35,34 @@ public class SetManager : MonoBehaviour
         _catlist = new List<Player>();
 
         Invoke("SetStart", 1f);
+
+        // 이전 데이터 읽기
+        LoadData();
     }
+    void LoadData()
+    {
+        string filename = "previousData";
+        string path = Application.persistentDataPath + "/" + filename + ".json";
+
+        try
+        {
+            FileStream filestream = new FileStream(path, FileMode.Open, FileAccess.Read);
+            byte[] filedata = new byte[filestream.Length];
+            filestream.Read(filedata, 0, filedata.Length);
+            filestream.Close();
+            string json = Encoding.UTF8.GetString(filedata);
+
+            PlayerData data = JsonUtility.FromJson<PlayerData>(json);
+            previousData = data;
+
+            Debug.Log("Load: " + json);
+        }
+        catch
+        {
+            Debug.Log("load previous data file error");
+        }
+    }
+
     void SetStart()
     {
         thisSet = GameObject.Instantiate(SetPrefabsList[0], transform);
@@ -145,9 +176,39 @@ public class SetManager : MonoBehaviour
 
     // Set 완료
     public void Active_Finish()
-    { 
+    {
+        // 게임 플레이어 데이터 저장 -> JSON
+        SaveData();
+
         _gm = FindObjectOfType<GameManager>();
         _gm.SetGameManager(_playerlist, _wolflist, _catlist, _whoswan);
+    }
+    private void SaveData()
+    {
+        PlayerData data = new PlayerData();
+        
+        data.player_count = _playerCount;
+        
+        List<string> names = new List<string>();
+        for (int i = 0; i < _playerlist.Count; i++)
+            names.Add(_playerlist[i].name);
+        data.player_names = names.ToArray();
+
+        data.count_wolf = _wolfCount;
+        data.count_cat = _catCount;
+        data.count_swan = _swanCount;
+
+        // JSON 데이터 문자열로 입력 완료
+        string json = JsonUtility.ToJson(data);
+
+        // 파일 덮어쓰기
+        string filename = "previousData";
+        string path = Application.persistentDataPath + "/" + filename + ".json";
+        FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
+        byte[] bytedata = Encoding.UTF8.GetBytes(json);
+        filestream.Write(bytedata, 0, bytedata.Length);
+        filestream.Close();
+        Debug.Log("Save: " + json);
     }
 
     public void EndThis()

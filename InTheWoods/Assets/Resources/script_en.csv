@@ -49,15 +49,15 @@ step2_other_hint_4_1,There are only
 step2_other_hint_4_2,cat(s) left.
 step2_other,Suspect everyone!
 step3_info,Find the wolf<br>through conversation!<br><br><color=yellow><size=50>wolves have mission word/act.</size></color>
-step4_info,"With everyone's opinion,<br>choose the wolf and <color=red>execute</color> it."
+step4_info,"With everyone's opinion,<br>choose the wolf and <color=red>kick</color> it <color=red>out</color>."
 step4_btn_pass,pass
 step4_btn_select_1,select
-step4_vote_info,Select one to <color=red>excute</color>.
+step4_vote_info,Select one to <color=red>kick out</color>.
 step4_btn_back,back
-step4_btn_select_2,execute
+step4_btn_select_2,ok
 step5_before_1,"As a result of the vote,"
-step5_before_2,<br>was <color=red>executed</color>.
-step5_before_null,No one<br>was executed.
+step5_before_2,<br>was <color=red>kicked out</color>.
+step5_before_null,No one<br>was kicked out.
 step5_btn_result,and
 step5_result_1,"According to the investigation,<br>"
 step5_result_2,was
@@ -79,3 +79,4 @@ game_end,end
 title,In the Woods
 no_swan,"Sadly, <br>There are no swan."
 load_ads,Loading…
+LoadData,Load Data

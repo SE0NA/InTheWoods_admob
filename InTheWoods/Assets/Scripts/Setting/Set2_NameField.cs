@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Set2_NameField : Localize
 {
     [SerializeField] TextMeshProUGUI txt_id;
-    [SerializeField] TMP_InputField if_name;
+    [SerializeField] public TMP_InputField if_name;
 
     int id;
 
