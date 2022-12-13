@@ -804,6 +804,7 @@ AnimationClip:
   - curve:
       serializedVersion: 2
       m_Curve:
+      - serializedVersion: 3
         time: 0
         value: 0.8773585
         inSlope: 0
