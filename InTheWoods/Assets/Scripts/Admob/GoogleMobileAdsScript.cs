@@ -20,7 +20,7 @@ public class GoogleMobileAdsScript : MonoBehaviour
         btnmanager = FindObjectOfType<StartBtnManager>();
 
 #if UNITY_ANDROID
-        adUnitId = "";
+        adUnitId = "ca-app-pub-3940256099942544/5224354917";
 #else
         adUnitId = "unexpected_platform";
 #endif

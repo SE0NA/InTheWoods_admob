@@ -22,6 +22,8 @@ public class MissionManager : MonoBehaviour
         {
             case SystemLanguage.Korean:
                 file_lang = "kr";   break;
+            case SystemLanguage.Japanese:
+                file_lang = "jp";   break;
             case SystemLanguage.English:
                 file_lang = "en";   break;
             default:

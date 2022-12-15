@@ -11,6 +11,8 @@ public class LocalizeWriter : Localize
         {
             case SystemLanguage.Korean:
                 lang = "kr";    break;
+            case SystemLanguage.Japanese:
+                lang = "jp"; break;
             case SystemLanguage.English:
                 lang = "en";    break;
             default:

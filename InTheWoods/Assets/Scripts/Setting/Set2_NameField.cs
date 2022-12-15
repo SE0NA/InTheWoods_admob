@@ -1,8 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 public class Set2_NameField : Localize
 {
@@ -16,6 +17,28 @@ public class Set2_NameField : Localize
     {
         id = num;
         txt_id.text = id.ToString();
+
+        // 한국어 사용자: 기본 키보드. 숫자, 영어, 한글 입력 가능
+        if (Application.systemLanguage == SystemLanguage.Korean)
+        {
+            if_name.keyboardType = TouchScreenKeyboardType.Default;
+            if_name.onValueChanged.AddListener(
+                (str) => if_name.text = Regex.Replace(str, @"[^0-9a-zA-Z가-힣]", ""));
+        }
+        else if(Application.systemLanguage == SystemLanguage.Japanese)
+        {
+            if_name.keyboardType = TouchScreenKeyboardType.Default;
+            if_name.onValueChanged.AddListener(
+                (str) => if_name.text = Regex.Replace(str, @"[^0-9a-zA-Z-んぁ-ゟァ-ヿ]", ""));
+        }
+        else
+        {
+            if_name.keyboardType = TouchScreenKeyboardType.ASCIICapable;
+            if_name.characterValidation = TMP_InputField.CharacterValidation.Alphanumeric;
+        }
+
+
+
         if_name.placeholder.GetComponent<TextMeshProUGUI>().text = GetValueFromCSV(21)
             + id.ToString() + GetValueFromCSV(22) + " ...";
     }
