@@ -29,10 +29,15 @@ public class Set3_Manager : MonoBehaviour
 
         playerCount = _setmanager.Get_PlayerCount();
 
+        // 늑대는 최대 4마리 가능
         wolf_slider.maxValue = playerCount / 3;
+        wolf_slider.maxValue = (wolf_slider.maxValue <= 4) ? wolf_slider.maxValue : 4;
         wolf_slider.value = wolf_slider.maxValue;
-        cat_slider.maxValue = (wolf_slider.maxValue > 1) ? 2 : 1;
+        // 고양이는 최대 3마리 가능
+        cat_slider.maxValue = playerCount / 4;
+        cat_slider.maxValue = (wolf_slider.maxValue <= 3) ? cat_slider.maxValue : 3;
         cat_slider.value = cat_slider.maxValue;
+        // 백조는 최대 1마리 가능
         swan_slider.maxValue = 1;
         swan_slider.value = swan_slider.maxValue;
     }

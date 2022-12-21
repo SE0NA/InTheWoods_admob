@@ -29,7 +29,7 @@ public class Set2_NameField : Localize
         {
             if_name.keyboardType = TouchScreenKeyboardType.Default;
             if_name.onValueChanged.AddListener(
-                (str) => if_name.text = Regex.Replace(str, @"[^0-9a-zA-Z-んぁ-ゟァ-ヿ]", ""));
+                (str) => if_name.text = Regex.Replace(str, @"[^0-9a-zA-Zぁ-んァ-ー０-９]", ""));
         }
         else
         {
