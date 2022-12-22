@@ -14,8 +14,6 @@
 -s="D:\game\InTheWoods_admob\InTheWoods\Library\PlayerScriptAssemblies"
 -s="D:\game\InTheWoods_admob\InTheWoods\Assets\GoogleMobileAds"
 -s="D:\game\InTheWoods_admob\InTheWoods\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom"
--s="D:\game\InTheWoods_admob\InTheWoods\Packages\com.unity.nuget.newtonsoft-json\Runtime\AOT"
--s="D:\game\InTheWoods_admob\InTheWoods\Packages\com.unity.nuget.newtonsoft-json\Runtime"
 -s="C:\Program Files\Unity\Hub\Editor\2020.3.42f1\Editor\Data\Managed\UnityEngine"
 -s="C:\Program Files\Unity\Hub\Editor\2020.3.42f1\Editor\Data\NetStandard\ref\2.0.0"
 -s="C:\Program Files\Unity\Hub\Editor\2020.3.42f1\Editor\Data\NetStandard\compat\2.0.0\shims\netstandard"

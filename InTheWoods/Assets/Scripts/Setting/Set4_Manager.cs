@@ -65,6 +65,9 @@ public class Set4_Manager : MonoBehaviour
     }
     string TeamList(List<Player> pl, Player me)
     {
+        if (PlayerPrefs.GetInt("KnowEachOther") == 0)
+            return "";
+
         string msg = "<color=red>" + _localmanager.GetValueFromCSV(29) + "</color>  ";  // µ¿·á
         int n;
 

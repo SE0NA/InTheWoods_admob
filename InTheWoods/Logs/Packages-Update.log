@@ -70,3 +70,11 @@ Update Mode: resetToDefaultDependencies
 
 The following packages were removed:
   com.unity.purchasing@4.5.2
+
+=== Wed Dec 21 16:50:40 2022
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were removed:
+  com.unity.purchasing@4.5.2

@@ -54,8 +54,6 @@ public class SetManager : MonoBehaviour
 
             PlayerData data = JsonUtility.FromJson<PlayerData>(json);
             previousData = data;
-
-            Debug.Log("Load: " + json);
         }
         catch
         {
