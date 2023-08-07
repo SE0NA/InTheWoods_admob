@@ -20,7 +20,7 @@ public class GoogleMobileAdsScript : MonoBehaviour
         btnmanager = FindObjectOfType<StartBtnManager>();
 
 #if UNITY_ANDROID
-        adUnitId = "ca-app-pub-3940256099942544/5224354917";
+        adUnitId = "";
 #else
         adUnitId = "unexpected_platform";
 #endif
@@ -38,7 +38,7 @@ public class GoogleMobileAdsScript : MonoBehaviour
         // Called when the ad is closed.
         this.rewardedAd.OnAdClosed += HandleRewardedAdClosed;
 
-        // ÄÚ·çÆ¾ ½ÃÀÛ
+        // ì½”ë£¨í‹´ ì‹œì‘
         StartCoroutine("AdsLoadWithNetwork");
     }
 
@@ -49,12 +49,12 @@ public class GoogleMobileAdsScript : MonoBehaviour
             Debug.Log("adsLoaded: " + adsLoaded);
             if (Application.internetReachability == NetworkReachability.NotReachable)
             {
-                // ³×Æ®¿öÅ©¿¡ ¿¬°áX -> ÄÚ·çÆ¾À¸·Î 0.1ÃÊ¸¶´Ù °è¼Ó ¿¬°á ¿©ºÎ È®ÀÎ
+                // ë„¤íŠ¸ì›Œí¬ì— ì—°ê²°X -> ì½”ë£¨í‹´ìœ¼ë¡œ 0.1ì´ˆë§ˆë‹¤ ê³„ì† ì—°ê²° ì—¬ë¶€ í™•ì¸
                 yield return new WaitForSecondsRealtime(0.1f);
             }
             else if (!adsLoaded)
             {
-                // ³×Æ®¿öÅ©°¡ ¿¬°áµÇ¸é ±¤°í¸¦ ¹Ş¾Æ¿È
+                // ë„¤íŠ¸ì›Œí¬ê°€ ì—°ê²°ë˜ë©´ ê´‘ê³ ë¥¼ ë°›ì•„ì˜´
                 // Create an empty ad request.
                 AdRequest request = new AdRequest.Builder().Build();
                 // Load the rewarded ad with the request.
@@ -67,14 +67,14 @@ public class GoogleMobileAdsScript : MonoBehaviour
                 adsLoaded = true;
             }
         }
-        Debug.Log("<color=aqua>±¤°í ·Îµå ¿Ï·á -> ÄÚ·çÆ¾ Á¾·á</color>");
+        Debug.Log("<color=aqua>ê´‘ê³  ë¡œë“œ ì™„ë£Œ -> ì½”ë£¨í‹´ ì¢…ë£Œ</color>");
         yield break;
     }
 
 
     public void  HandleRewardedAdLoaded(object sender, EventArgs args)
     {
-        Debug.Log("±¤°í ·Îµå ¼º°ø");
+        Debug.Log("ê´‘ê³  ë¡œë“œ ì„±ê³µ");
     }
     public void HandleUserEarnedReward(object sender, EventArgs args)
     {
@@ -112,15 +112,15 @@ public class GoogleMobileAdsScript : MonoBehaviour
     {
         if(Application.internetReachability == NetworkReachability.NotReachable)
         {
-            // ÀÎÅÍ³İ ¿¬°áX
+            // ì¸í„°ë„· ì—°ê²°X
             btnmanager.SetActive_StartBtn(false);
             toast_msg.GetComponent<Animator>().Play("toast_up");
             Invoke("ToastDown", 1f);
         }
         else
         {
-            // ÀÎÅÍ³İ ¿¬°áO
-            if (!adsLoaded)    // ±¤°í ·Îµù ¾ÈµÊ
+            // ì¸í„°ë„· ì—°ê²°O
+            if (!adsLoaded)    // ê´‘ê³  ë¡œë”© ì•ˆë¨
             {
                 btnmanager.SetActive_StartBtn(false);
                 toast_msg.GetComponent<Animator>().Play("toast_up");
@@ -128,10 +128,10 @@ public class GoogleMobileAdsScript : MonoBehaviour
             }
             else
             {
-                // È­¸é ÆäÀÌµå ¾Æ¿ô -> ±¤°í
+                // í™”ë©´ í˜ì´ë“œ ì•„ì›ƒ -> ê´‘ê³ 
                 btnmanager.SetActive_StartBtn(false);
                 btnmanager.anim.Play("btn_fade_out");
-                btnmanager.FadeOutBeforeAds();  // ÆäÀÌµå ¾Æ¿ô 1.5ÃÊ
+                btnmanager.FadeOutBeforeAds();  // í˜ì´ë“œ ì•„ì›ƒ 1.5ì´ˆ
                 Invoke("ShowAds", 1f);
             }
         }
